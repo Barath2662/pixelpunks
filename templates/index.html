@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Analysis Chatbot</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="theme-toggle">
+        <button id="toggle-dark-mode">Toggle Dark Mode</button>
+    </div>
+
+    <div class="chat-container">
+        <div class="chat-messages">
+            <!-- Chat messages will be dynamically added here -->
+        </div>
+        <div id="initial-message" class="initial-message">
+            Hello! Please upload an image, and then you can ask me questions about it.
+        </div>
+        <div class="chat-input">
+            <input type="file" id="image-input" accept="image/*" style="display: none;">
+            <button id="upload-button">Upload Image</button>
+            <input type="text" id="message-input" placeholder="Type your message...">
+            <button id="send-button">Send</button>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
