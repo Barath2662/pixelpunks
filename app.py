@@ -4,6 +4,8 @@ from PIL import Image
 import io
 import concurrent.futures
 import logging
+import os
+
 
 app = Flask(__name__)
 
@@ -150,5 +152,5 @@ def is_image_related(user_input, image_analysis):
 
     return False
 
-if __name__ == '__main__':
-    app.run(debug=True)
+if __name__ == "__main__":
+    app.run(host='0.0.0.0', port=int(os.environ.get('PORT', 5000)))
